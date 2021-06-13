@@ -1,0 +1,263 @@
+/* ************************************************************************* */
+/* ************************************************************************* */
+/*
+    Styling
+*/
+/* ************************************************************************* */
+/* ************************************************************************* */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Verdana, Tahoma, sans-serif;
+    letter-spacing: 1px;
+}
+
+body, a {
+    color: white;
+    min-height: 100%;
+}
+
+.bgimage {
+    background-image: url("../images/bgimage.jpg");
+    height: 100%; 
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    /* overflow: hidden; */
+}
+
+.homeContainer, .aboutContainer, .contactContainer {
+    margin: 0 10%;
+    height: 100%;
+    background: rgba(51, 51, 51, 0.6);
+}
+
+header, section, .homeImages, .aboutImages, footer, .contactForm {
+    border: 1px solid black;
+}
+
+.logo {
+    text-shadow: 3px 2px 3px #539dcd;
+}
+
+.travelImg, .heroImg {
+    width: 100%;
+    height: 700px;
+    margin: 0 auto;
+}
+
+.findTours {
+    background-color: #fff;
+    margin: 7px;
+    padding: 5px;
+    border-radius: 2px;
+    text-decoration:none;
+    font-weight:300;
+    text-align:center;
+    transition: all ease 0.2s;
+    font-weight: bold;
+    border-radius: 10px;
+    width: 85%;
+    height: 30px;
+}
+
+.formField {
+    width: 300px;
+}
+
+.formParent {
+    font-weight: 700;
+    background: #333;
+    padding: 30px 50px 30px 10px;
+}
+
+.homeForm {
+    border-radius: 10px;
+    height: 35px;
+    margin: 10px;
+    padding-left: 7px; 
+}
+
+.homeForm::placeholder{
+    font-size: 18px;
+}
+
+.homeForm:focus {
+    outline: none;
+} 
+
+form button {
+    width: 100%;
+    grid-column: 2 / 3;
+    height: 35px;
+    font-size: 15px;
+    font-weight: 600;
+    letter-spacing: 2px;
+}
+
+button:hover{
+    color:#fff;
+    background-color:#539dcd;
+}
+
+.activeNav a {
+    color: #539dcd;
+}
+
+.navLinks:hover {
+    text-decoration: underline;
+    color: #539dcd;
+    transition: all ease 0.2s;
+}
+
+header, footer {
+    background: #333;
+}
+
+footer {
+    height: 30px;
+    margin-top: -30px;
+}
+
+/* footer {
+    position: absolute;
+    bottom: 0;
+    width: 78.32%
+}  */
+
+/* ************************************************************************* */
+/* ************************************************************************* */
+/*
+    Used Flexbox here
+*/
+/* ************************************************************************* */
+/* ************************************************************************* */
+.header {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+}
+
+.navigation {
+    display: flex;
+    list-style: none;
+    align-items: center;
+}
+
+.logo {
+    font-size: 25px;
+    align-self: center;
+}
+
+img {
+    width: 250px;
+    margin: 50px 0;
+}
+
+.navLinks , a {
+    text-decoration: none;
+    font-size: 20px;
+    padding: 10px;
+}
+
+section, footer {
+    padding: 10px;
+}
+
+.homeImage2 {
+    display: flex;
+    justify-content: space-between;
+    padding: 5px; 
+}
+
+.colImage {
+    flex: 33.33%;
+    padding: 10px;    
+}
+
+input {
+    height: 20px;
+}
+
+footer {
+    display: flex;
+    height: fit-content;
+}
+
+footer p {
+    align-self: center;
+}
+
+/* ************************************************************************* */
+/* ************************************************************************* */
+/*
+    Used Grid here
+*/
+/* ************************************************************************* */
+/* ************************************************************************* */
+/* 
+    Grid Index page  
+*/
+/* ************************************************************************* */
+.homeHeader {
+    grid-area: homeHeader;
+}
+
+.homeSection {
+    grid-area: homeSection;
+}
+
+.homeImage1 {
+    grid-area: homeImage1;
+}
+
+.homeImage2 {
+    grid-area: homeImage2;
+}
+
+.homeFooter {
+    grid-area: homeFooter;
+}
+
+.homeContainer {
+    display: grid;
+    grid-template-columns: 200px;
+    grid-template-rows: auto;
+    grid-template-areas: 
+    "homeHeader homeHeader"
+    "homeSection homeImage1"
+    "homeSection homeImage2"
+    "homeFooter homeFooter";
+}
+
+/* ************************************************************************* */
+/* 
+    Grid - form
+*/
+/* ************************************************************************* */
+.formContainer {
+    display: grid;
+    justify-content: center;
+    padding: 50px;
+}
+
+form {
+    display: grid;
+    grid-template-columns: 200px 1fr;
+    grid-gap: 20px;    
+}
+
+label {
+    grid-column: 1 / 2;
+    grid-template-columns: 200px;
+    justify-self: end;
+}
+
+input, textarea {
+    grid-column: 2 / 3;
+}
+/* ************************************************************************* */
+/* ************************************************************************* */
